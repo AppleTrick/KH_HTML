@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/testw/product" method="POST" >
+        <fieldset>
+            <legend>납품자 정보</legend>
+            <ol>
+                <li>
+                    <label for="name">납품자명:</label>
+                    <input type="text" name="name">
+                </li>
+                <br>
+                <li>
+                    <label for="email">email:</label>
+                    <input
+                        type="email"
+                        name="email">
+                </li>
+                <br>
+                <li>
+                    <label for="website">홈페이지:</label>
+                    <input type="url"  name="website" >
+                </li>
+            </ol>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>납품정보</legend>
+            <ul>
+                <li>
+                    <label for="goodirum">상품명:</label>
+                    <input type="text" name="goodirum" list="goodlist">
+                    <datalist id="goodlist">
+                    </datalist>
+                </li>
+                <br>
+                <li>
+                    <label for="number">납품수량:</label>
+                    <input
+                        type="number"
+                        name="number">
+                </li>
+                <br>
+                <li>
+                    <label for="range">납품등급:</label>
+                    <input type="range" name="range">
+                </li>
+                <br>
+                <li>
+                    <label for="message">기타사항:</label>
+                    <textarea name="message" ></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <br>
+        <input type="submit" value="send message">
+    </form>
+    
+</body>
+</html>
