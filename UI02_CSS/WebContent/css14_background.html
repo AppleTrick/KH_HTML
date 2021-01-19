@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    
+    div , p{
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+    } 
+
+    #bg-size {
+        background: url("resources/img/img_01.png");
+        /* background-size: cover; */
+        background-size: contain;
+
+    }
+
+    #multi-bg {
+        background-image: url("resources/img/img_01.png") , url("resources/img/img_02.png");
+        background-size: contain;
+    }
+
+    #bg-clip {
+        border: 10px dotted black;
+        padding: 50px;
+        background: blue;
+        /* background-clip: content-box; */
+        /* 실제 내용만 들어가는 부분 만 들어가게됨 */
+
+        /* background-clip: padding-box;
+        패딩 부분까지 색이 들어가게됨 */
+
+        background-clip: border-box;
+        /* 선부분까지 색이 들어가게됨 */
+
+    }
+
+    #txt-shadow {
+        text-shadow: 1px 2px #cccccc;
+    }
+
+    #wrap {
+        word-wrap: break-word;
+    }
+
+    @font-face {
+       font-family: "baemin";
+       src: url("resources/font/BMJUA.ttf")format("truetype");
+    }
+
+    #baemin {
+        font-family: "baemin";
+        font-size: 30pt;
+    }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>background-size</h1>
+    <div id="bg-size">backgroundsize</div>
+
+    <h1>multi-background</h1>
+    <div id="multi-bg">multi-background</div>
+
+    <h1>background-clip</h1>
+    <div id="bg-clip">background-clip</div>
+
+    <h1>text-shadow</h1>
+    <div id="txt-shadow">text-shadow</div>
+
+    <h1>word-wrap</h1>
+    <div id="wrap">wordwrapwordwrapwordwrapwordwrapwordwrapwordrapwordwrap</div>
+
+
+    <h1>font face</h1>
+    <div id="baemin">배민체 갓갓</div>
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
