@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1. 숫자형 형변환 number()</h2>
+    <p>문자형(정수형, 실수형)을 숫자형으로 반환</p>
+
+    <input type="text" id="num">
+    <button onclick="numTest(num.value)">클릭</button>
+
+    <script type="text/javascript">
+    function numTest(val){
+        console.log(Number(val));
+        var val = Number(val);
+
+        alert(val + " : " + typeof(val));
+    }
+    </script>
+
+    <h2>2. 정수형 형변환 parseInt()</h2>
+    <p>문자형을 정수형으로 반환</p>
+    <input type="text" id="int">
+    <button onclick="intTest(int.value)">클릭!</button>
+
+    <script type="text/javascript">
+    function intTest(val){
+        var val = parseInt(val) + 5;
+        alert(val + " : " + typeof(val));
+    }
+    </script>
+
+    <h2>3. 실수형 형변환 parseInt()</h2>
+    <p>문자형을 실수형으로 반환</p>
+    <input type="text" id="float">
+    <button onclick="floatTest(float.value)">클릭!</button>
+
+    <script type="text/javascript">
+    function floatTest(val){
+        var val = parseFloat(val) + 5;
+        alert(val + " : " + typeof(val));
+    }
+    </script>
+
+    <h2>4.검증함수 eval()</h2>
+    <p>문자열로 된 코드를 자바스크립트로 가지고 와서 실행</p>
+    <input type="text" name="evalue" placeholder="예) 5 + 10">
+    <button onclick="evalTest()">계산</button>
+    <span></span>
+
+    <script type="text/javascript">
+        function evalTest(){
+            var val = document.getElementsByName("evalue")[0];
+            if(confirm("작성하신 코드가 맞나요 ? : " + val.value)){
+                document.getElementsByTagName("span")[0].innerHTML = "<b> 계산결과 " + eval(val.value) + "<b>";
+            }else {
+                val.value = "다시작성해주세요";
+            }
+        }
+    </script>
+
+    <hr>
+    <input type="number" id="first">
+    <input type="text" list="cal" id="gg">
+    <datalist id="cal">
+        <option value="+"></option>
+        <option value="-"></option>
+        <option value="*"></option>
+        <option value="/"></option>
+    </datalist>
+    <input type="number" id="second">
+    <button onclick="calc();"> = </button>
+    <span></span>
+
+    <script>
+        function calc(){
+            var a = document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+            
+            var res = a + document.getElementById("gg").value + b;
+            console.log(res);
+            
+            document.getElementsByTagName("span")[1].innerHTML = eval(res);
+        }
+    </script>
+</body>
+</html>
