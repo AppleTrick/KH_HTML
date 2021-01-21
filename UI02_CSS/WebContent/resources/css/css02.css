@@ -27,6 +27,12 @@ h1 {
     color: springgreen;
 }
 
+
+/* 전체선택자 */
+* {
+    text-align: left;
+}
+
 /* 자식선택자 */
 
 #at > p {
