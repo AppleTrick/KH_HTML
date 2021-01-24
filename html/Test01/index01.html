@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .first span {
+            width: 150px;
+            display: inline-block;
+        }
+        .second span {
+            width: 150px;
+            display: inline-block;
+            
+        }
+        .second textarea {
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <fieldset class="first">
+        <legend>필수 입력 정보</legend>
+        <span >아이디 : </span> <input type="text" placeholder="아이디를 입력하세요"><br>
+        <span >비밀번호 : </span> <input type="text" placeholder="비밀번호를 입력하세요"><br>
+        <span >비밀변호 확인 : </span> <input type="text" placeholder="비밀번호를 다시 입력하세요"><br>
+        <span >이름 : </span> <input type="text" placeholder="이름을 입력하세요"> <br>
+        <span >이메일 : </span> <input type="text" placeholder="이메일을 입력하세요"><br>
+        <span >휴대전화번호 : </span> <input type="text" placeholder="휴대 번호를 입력하세요"><br>
+        <span >홈페이지 : </span> <input type="text" value="http://">
+    </fieldset>
+
+    <fieldset class="second">
+        <legend>추가 입력 정보</legend><br>
+        <span>국적 :</span>
+        <input type="text" list="nation" id="gg">
+        <datalist id="nation">
+            <option value="한국" selected></option>
+            <option value="중국"></option>
+        </datalist><br>
+        <span>생년월일 : </span><input type="date" name="" id=""><br>
+        <span>성별 : </span>
+        <input type="radio" name="sex">남자
+        <input type="radio" name="sex">여자<br>
+        <span>취미 : </span>
+            <input type="checkbox" name="낚시"><label for="hobby">낚시</label>
+            <input type="checkbox" name="게임"><label for="hobby">게임</label>
+            <input type="checkbox" name="요리"><label for="hobby">요리</label><br>
+        <span>특이 사항 </span><textarea name="" id="" cols="30" rows="5"></textarea>
+
+    </fieldset>
+    <br><br>
+    <input type="reset" value="취소하기">
+    <input type="submit" value="가입하기">
+    
+</body>
+</html>
