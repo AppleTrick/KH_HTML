@@ -95,6 +95,27 @@
             alert(b);
             alert(queue);
         }
+
+        function sliceTest(){
+            var array01 = new Array(1,2,3,4,5,6,7);
+            var slice01 = array01.slice(1,2);
+            console.log(slice01);
+            alert(slice01);
+
+            var array02 = new Array(4);
+            array02[0] = new Array(1,2);
+            array02[1] = new Array(3,4);
+            array02[2] = new Array(5,6);
+            array02[3] = new Array(7,8);
+            array02[4] = new Array(9,10);
+
+            var slice02 = array02.slice(1,3)
+            alert(slice02)
+
+            slice02[0][1] =40;
+            // slice 를 하고 설정을 하면 원본과 연결되어 관계 되어있다.
+            alert(array02);
+        }
     </script>
 </head>
 <body>
@@ -119,7 +140,7 @@
                 <li>pop()</li>
             </ul>
         </li>
-        <li>slice()</li>
+        <li onclick="sliceTest()" class="select">slice</li>
     </ul>
 </body>
 </html>
