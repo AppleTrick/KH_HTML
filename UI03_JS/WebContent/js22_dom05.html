@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        p {
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+        function addAppend(){
+            var fieldset = document.getElementById("addele");
+            
+            var p = document.createElement("p");
+            p.textContent = "자식 요소들 중 가장 마지막에 들어갑니다";
+
+            fieldset.appendChild(p);
+        }
+
+        var cnt = 1;
+
+        function addBefore(){
+            var p = document.createElement("p")
+            p.textContent = "선택된 엘리먼트의 앞에 붙여 넣어요" + (cnt++);
+
+            var div = document.querySelector("fieldset > div");
+            var fieldset = document.getElementById("addele");
+            
+            // insertBefore div 태그를 찾아서 그 앞에 p를 넣어줘라.
+            fieldset.insertBefore(p,div);
+        }
+
+        function moveElement(){
+            var ele = document.querySelector("fieldset").children[1];
+
+            var body = document.body;
+            body.appendChild(ele);
+        }
+    </script>
+</head>
+<body>
+    <h1>태그 추가하기</h1>
+
+    <button onclick="addAppend()">appendChild()</button>
+    <button onclick="addBefore()">insertBefore()</button>
+    <button onclick="moveElement()">appendChild를 이용한 엘리먼트 이동</button>
+
+    <fieldset id="addele">
+        <legend>부모태크</legend>
+        <div>div태그</div>
+    </fieldset>
+
+
+    <hr>
+
+    <h3>
+        문제1 . test01 태그에 "dom test" 라는 내용을 가진 div 태그 생성하기
+    </h3>
+    <button onclick="addTest()"> 클릭</button>
+
+    <h3>
+        문제 2 . test01 태그 안에 생성된 div 태그들을 test02 태그 안으로 이동하기
+    </h3>
+    <button onclick="moveTest()">클릭</button>
+
+*test01
+<div id="test01"></div>
+*test02
+<div id="test02"></div>
+<script>
+
+    var cnt = 1
+    function addTest(){
+        var div = document.createElement("div");
+        div.textContent = "dom test" + (cnt++);
+
+        document.getElementById("test01").appendChild(div);
+    }
+
+
+    function moveTest(){
+        var div = document.querySelector("#test01").children[0]
+        var test02 = document.querySelector("#test02");
+        test02.appendChild(div);
+    }
+</script>
+
+</body>
+<style>
+    #test01, #test02{
+        width: 300px;
+        height: 300px;
+        border: 1px dotted blue;
+    }
+
+</style>
+</html>
